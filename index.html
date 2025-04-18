@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Satisfy&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <title>موراساکی</title>
+    <style>
+        /* Vazir Thin - weight 100 */
+        @font-face {
+        font-family: 'Vazir';
+        src: url('https://cdn.fontcdn.ir/Fonts/Vazir/ad3cd4cbda94aee8578c1b622b9002f9dfe345c05870eb375a02da853d08f072.woff2') format('woff2'),
+            url('https://cdn.fontcdn.ir/Fonts/Vazir/7029f2f063c6d00005e5d2e09c72bb347b932db1ce0c5a169a2383ce61e57ca5.woff') format('woff'),
+            url('https://cdn.fontcdn.ir/Fonts/Vazir/fbf69c15be382ecbb610544ce393affeb070b04de58fda230db9dd0b005f1b5f.ttf') format('truetype');
+        font-weight: 100;
+        font-style: normal;
+        font-display: swap;
+        }
+
+        /* Vazir Light - weight 300 */
+        @font-face {
+        font-family: 'Vazir';
+        src: url('https://cdn.fontcdn.ir/Fonts/Vazir/046a76746039189feb148c360dfb82d07a1e3464d31a2078363587af6f5a1cfb.woff2') format('woff2'),
+            url('https://cdn.fontcdn.ir/Fonts/Vazir/b9e4044238227ce402881503192eb3ebff427c237e01e5764fbbf37954feeb0c.woff') format('woff'),
+            url('https://cdn.fontcdn.ir/Fonts/Vazir/fe641502f88d291cb4197c75028dd2ce572725e7112db8722f1569fd01093bd9.ttf') format('truetype');
+        font-weight: 300;
+        font-style: normal;
+        font-display: swap;
+        }
+
+        /* Vazir Regular - weight 400 */
+        @font-face {
+        font-family: 'Vazir';
+        src: url('https://cdn.fontcdn.ir/Fonts/Vazir/d783603a0dd07db6896ecd8a3460e2256a48dca62373a0478706a05490c1a2d8.woff2') format('woff2'),
+            url('https://cdn.fontcdn.ir/Fonts/Vazir/d8ac444cba062f8881a04ae6c2c1b64f8e783d24077ccaeb3b253e45b0e3f68c.woff') format('woff'),
+            url('https://cdn.fontcdn.ir/Fonts/Vazir/7bc35750358416a6a7189b02d39b945605b8f2fc6a425521c41051a0209cb564.ttf') format('truetype');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+        }
+
+        /* Vazir Medium - weight 500 */
+        @font-face {
+        font-family: 'Vazir';
+        src: url('https://cdn.fontcdn.ir/Fonts/Vazir/fc6648da06acebfe96ad5a8f077f569c5c4dd75b77122951723ddfbfeb191728.woff2') format('woff2'),
+            url('https://cdn.fontcdn.ir/Fonts/Vazir/50fa8f94166e2a2b2a51442d25a7033e9fc85614d930e05335bdcfd522b5811e.woff') format('woff'),
+            url('https://cdn.fontcdn.ir/Fonts/Vazir/193a80b0744e7fa12006e5698e48b506d6c788013f5741378a16e02847e10811.ttf') format('truetype');
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+        }
+
+        /* Vazir Bold - weight 700 */
+        @font-face {
+        font-family: 'Vazir';
+        src: url('https://cdn.fontcdn.ir/Fonts/Vazir/3b2277e82a583c9f91de41aa9e198a14d7ef7f4ccd04828abdd623acd116a88b.woff2') format('woff2'),
+            url('https://cdn.fontcdn.ir/Fonts/Vazir/a36031534021625309645dd204a61b39fefad8635846b8d9fbc84aaae3797f37.woff') format('woff'),
+            url('https://cdn.fontcdn.ir/Fonts/Vazir/26b014151db38eb6a7455c4fceaf1c6c8e58c9c96cd7d1d0abea64288d0b5c18.ttf') format('truetype');
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+        }
+
+        /* Vazir Black - weight 900 */
+        @font-face {
+        font-family: 'Vazir';
+        src: url('https://cdn.fontcdn.ir/Fonts/Vazir/71671477a4b62305fbd3ed4976a31c3c08520cf914656ece6b79543524a49132.woff2') format('woff2'),
+            url('https://cdn.fontcdn.ir/Fonts/Vazir/164eba9231506861f4b51405a3fb57554ee94b5e4263f01d405f42088ca550c0.woff') format('woff'),
+            url('https://cdn.fontcdn.ir/Fonts/Vazir/a1e789d412f7ff7b6c2a61f8e88e331dd852cfecff76f0c3eddfac73e30d63c8.ttf') format('truetype');
+        font-weight: 900;
+        font-style: normal;
+        font-display: swap;
+        }
+
+        body {
+            font-family: "Vazir", 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fffef6;
+            color: #333;
+            direction: rtl;
+        }
+        
+        .status-bar {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 15px;
+            font-size: 14px;
+            color: #000;
+            background-color: #fffef6;
+        }
+        
+        .lock-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin: 0 auto;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .header {
+            font-family: "Satisfy", cursive;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 40px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+        
+        .separator {
+            text-align: center;
+            color: #db927b;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 20px;
+            border-bottom: 1px dashed #ddd;
+        }
+        
+        .item-title {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        
+        .item-description {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .item-price {
+            color: #666;
+            align-self: flex-start;
+            direction: ltr;
+            text-align: left;
+            font-size: 16px;
+            min-width: 60px;
+        }
+        
+        .menu-container {
+            max-width: 100%;
+            padding: 0 10px;
+        }
+        
+        .scroll-indicator {
+            position: fixed;
+            bottom: 20px;
+            right: 50%;
+            transform: translateX(50%);
+            width: 40px;
+            height: 40px;
+            background-color: #fff;
+            border: 1px solid #db927b;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #db927b;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="header">
+        Murasaki
+    </div>
+    
+    <div class="separator">
+        ~ * * * ~
+    </div>
+    
+    <div class="menu-container">
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">زبرا رول: zebra roll</div>
+                <div class="item-description">سالمون ، سس تنکاتسو ، آووکادو ، پنیر فیلادلفیا ، انبه</div>
+            </div>
+            <div class="item-price">تومان ۶۲۰,۰۰۰</div>
+        </div>
+        
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">سافت شِل کرب رول: softshell crab roll</div>
+                <div class="item-description">برنج ، جلبک ، میگو سوخاری ، کرب ،  انبه ، سس</div>
+            </div>
+            <div class="item-price">تومان ۶۲۰,۰۰۰</div>
+        </div>
+        
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">شریمپ رول: shrimp roll</div>
+                <div class="item-description">برنج ، جلبک ، میگو سوخاری و آووکادو  ، توبیکو</div>
+            </div>
+            <div class="item-price">تومان ۵۶۰,۰۰۰</div>
+        </div>
+        
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">موراساکی: Murasaki roll</div>
+                <div class="item-description">برنج ، جلبک ، میگو سوخاری ، آووکادو ، سالمون</div>
+            </div>
+            <div class="item-price">تومان ۸۵۰,۰۰۰</div>
+        </div>
+        
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">چیکن رول: chicken roll</div>
+                <div class="item-description">برنج ، جلبک ، مرغ کاتسو ، فلفل دلمه ، هویج ، سس تند ژاپنی ، کنجد</div>
+            </div>
+            <div class="item-price">۵۲۰,۰۰۰ تومان</div>
+        </div>
+        
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">وگن رول: vegan roll</div>
+                <div class="item-description">برنج ، جلبک ، هویج ، انبه ، خیار ، آووکادو </div>
+            </div>
+            <div class="item-price">۳۶۰,۰۰۰ تومان</div>
+        </div>
+        
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">هر ۱۰ گرم خاویار اضافه</div>
+                <!-- <div class="item-description">مارماهی، سالمون، ماهی تن، آواکادو، هالوپینو</div> -->
+            </div>
+            <div class="item-price">تومان ۸۲۰,۰۰۰</div>
+        </div>
+        
+        <!-- <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">اسپرینگ رول</div>
+                <div class="item-description">سالمون تازه، گشنیز، پیازچه</div>
+            </div>
+            <div class="item-price">T 725</div>
+        </div>
+        
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-title">دراگون رول</div>
+                <div class="item-description">میگو تمپورا، سس مایو، مارچوبه</div>
+            </div>
+            <div class="item-price">T 800</div>
+        </div> -->
+    </div>
+    
+    <!-- <div class="scroll-indicator">
+        □
+    </div> -->
+</body>
+</html>
